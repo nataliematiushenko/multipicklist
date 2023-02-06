@@ -1,0 +1,22 @@
+<template>
+  <div class="slds-grid slds-gutters"
+    style="min-height:200px;">
+
+    <div class="slds-col slds-float-left">
+      <c-mutli-select-picklist picklistlabel="Parent list of filters"
+        values={filters}
+        onaddfilter={addNewFilter}
+        onremovefilter={removeFilter}></c-mutli-select-picklist>
+    </div>
+    <div class="slds-col">
+      <template for:each={renderedDropdowns}
+        for:item="filter">
+        <!-- ADD YOUR CHILD DROPDOWN HERE -->
+        <c-pill-dropdown key={filter.value}
+          onremovepill={removePill}
+          pill={filter}></c-pill-dropdown>
+      </template>
+    </div>
+  </div>
+
+</template>

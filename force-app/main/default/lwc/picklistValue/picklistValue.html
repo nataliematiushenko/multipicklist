@@ -1,0 +1,18 @@
+<!--
+Author of the original component : Brahmaji tammana
+Altered by: Nataliia Matiushenko :)
+-->
+<template>
+    <!-- Picklist values in drop down -->
+    <li role="presentation"
+        class="slds-listbox__item">
+        <div id="option"
+            class="slds-media slds-listbox__option slds-listbox__option_plain slds-media_small slds-is-selected"
+            role="option">
+            <lightning-input type="checkbox"
+                checked={selected}
+                label={label}
+                onclick={handleSelect}></lightning-input>
+        </div>
+    </li>
+</template>

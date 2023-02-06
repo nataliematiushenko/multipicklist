@@ -1,0 +1,32 @@
+<template>
+  <div class="slds-listbox_selection-group">
+    <ul class="slds-listbox slds-listbox_horizontal"
+      role="listbox"
+      aria-label="Selected Options:"
+      aria-orientation="horizontal">
+
+      <li class="slds-listbox-item"
+        role="presentation">
+        <span class="slds-pill"
+          role="option"
+          tabindex="0"
+          aria-selected="true">
+          <span class="slds-pill__label"
+            title={label}
+            onclick={toggleDropdown}>{label}</span>
+          <span class="slds-icon_container slds-pill__remove"
+            title="Remove">
+            <lightning-icon icon-name="utility:close"
+              size="x-small"
+              aria-hidden="true"
+              alternative-text="Remove"
+              title="Remove"
+              onclick={closePill}>
+            </lightning-icon>
+            <span class="slds-assistive-text">Click to remove</span>
+          </span>
+        </span>
+      </li>
+    </ul>
+  </div>
+</template>

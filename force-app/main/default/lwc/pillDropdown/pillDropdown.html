@@ -1,0 +1,10 @@
+<template>
+  <c-pill onremovepill={removePill}
+    onshowoptions={toggleDropdown}
+    label={pillLabel}></c-pill>
+
+  <c-dropdown if:true={showDropdown}
+    list-to-display={pill.values}
+    onaddfiltervalue={addFilterValue}></c-dropdown>
+
+</template>
